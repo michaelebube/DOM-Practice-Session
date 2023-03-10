@@ -103,4 +103,67 @@ console.log(first);
 const last =  document.querySelector('#last')
 */
 
+/* nodeValue and textContent 
+//nodeValue
+const item = document.getElementById('special')
+const value = item.firstChild.nodeValue;
+console.log(value);
+// console.log(item.childNodes[0].nodeValue)
+
+//textContent
+const easyValue = item.textContent
+console.log(easyValue);
+*/
+
+/* getAttribute() and setAttribute() 
+const first = document.querySelector('.first')
+const idValue = first.getAttribute('id')
+//console.log(idValue);
+
+const link = document.getElementById('link');
+const showLink = link.getAttribute('href');
+console.log(showLink);
+
+const last = link.nextElementSibling;
+last.setAttribute('class', 'first')
+last.textContent = 'I also have a class of first'
+console.log(last);
+
+const links = document.querySelectorAll('.first')
+console.log(links);
+*/
+
+/* classList and className 
+const first = document.getElementById('first')
+const second = document.getElementById('second')
+const third = document.getElementById('third')
+
+const classValue = first.className
+console.log(classValue);
+
+second.className = 'text colors';
+//second.className = 'colors';
+
+// third.classList.add('colors');
+// third.classList.add('text');
+third.classList.add('text', 'colors');
+third.classList.remove('text') 
+
+const classValues = third.classList;
+console.log(classValues);
+
+let result = third.classList.contains('colors')
+console.log(result);
+if(result) {
+    console.log('Hello Nigeria');
+}
+else {
+    console.log('does not have the class');
+}
+*/
+
+/* createElement('element), createTextNode('text content) , element.appendChild(childElement) */
+
+
+
 
