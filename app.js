@@ -162,7 +162,104 @@ else {
 }
 */
 
-/* createElement('element), createTextNode('text content) , element.appendChild(childElement) */
+/* createElement('element), createTextNode('text content) , element.appendChild(childElement) 
+const result = document.querySelector('#result')
+
+// create empty element
+const bodyDiv = document.createElement('div');
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+document.body.appendChild(bodyDiv);
+
+
+const heading = document.createElement('h2')
+const headingText = document.createTextNode('dynamic heading')
+heading.appendChild(headingText);
+heading.classList.add('blue');
+
+result.appendChild(heading)
+
+console.log(result.children);
+
+*/
+
+/* insertBefore 
+const result = document.querySelector('#result');
+const first = document.querySelector('.red')
+
+// create empty element
+const bodyDiv = document.createElement('div');
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+
+document.body.insertBefore(bodyDiv, result)
+// result element
+
+const heading = document.createElement('h2')
+const headingText = document.createTextNode('dynamic heading')
+heading.appendChild(headingText);
+heading.classList.add('blue');
+
+result.insertBefore(heading, first)
+
+console.log(result.children);
+
+*/
+
+/* replaceChild 
+const result = document.querySelector('#result');
+const first = document.querySelector('.red')
+
+// create empty element
+const bodyDiv = document.createElement('div');
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+
+document.body.insertBefore(bodyDiv, result)
+// result element
+
+const heading = document.createElement('h2')
+const headingText = document.createTextNode('dynamic heading')
+heading.appendChild(headingText);
+heading.classList.add('blue');
+
+result.insertBefore(heading, first)
+
+// He created a new element to explain the replaceChild method
+const smallHeading = document.createElement('h6');
+const smallHeadingText = document.createTextNode(`I am small heading text`)
+smallHeading.classList.add('red')
+smallHeading.appendChild(smallHeadingText);
+document.body.replaceChild(smallHeading, bodyDiv)
+
+
+
+console.log(result.children);
+*/
+
+/* prepend innerText 
+const heading = document.createElement('h2');
+heading.innerText = `I am dynamic heading`;
+document.body.prepend(heading);
+*/
+
+/* remove, removeChild */
+
+
+const result = document.querySelector('#result')
+//result.remove();
+const heading = result.querySelector('h1');
+result.removeChild(heading);
+
+
+
+
+
+
+
 
 
 
