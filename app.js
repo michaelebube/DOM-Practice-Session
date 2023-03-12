@@ -246,13 +246,112 @@ heading.innerText = `I am dynamic heading`;
 document.body.prepend(heading);
 */
 
-/* remove, removeChild */
+/* remove, removeChild 
 
 
 const result = document.querySelector('#result')
 //result.remove();
 const heading = result.querySelector('h1');
 result.removeChild(heading);
+*/
+
+/* innerHTML && textContent 
+const list = document.getElementById('first')
+const div = document.getElementById('second')
+const item = document.querySelector('.item')
+
+
+console.log(div.textContent);
+console.log(list.innerHTML);
+
+const randomVar = 'random value'
+
+const ul = document.createElement('ul');
+ul.innerHTML = `<li class="item">${randomVar}</li>
+    <li>list item</li>  <li>list item</li>`
+    document.body.appendChild(ul);
+
+div.textContent = 'hello world'
+div.innerHTML = 'hello people'
+*/
+
+/* CSS 
+const random = document.querySelector('.random');
+// longer process
+// random.style.backgroundColor = 'blue'
+// random.style.color = 'white'
+// random.style.fontSize = '3rem'
+// random.style.backgroundColor = 'capitalize'
+
+//Shorter Way
+random.classList.add('title')
+*/
+
+/* Click Event -  addEventlistener() 
+const btn = document.querySelector('.btn');
+const heading = document.querySelector('h2')
+
+// btn.addEventListener('click', function() {
+//     // console.log('hey you clicked me');
+//     heading.classList.add('red')
+// });
+
+function changeColors() {
+    let hasClass = heading.classList.contains('red')
+    if(hasClass) {
+        heading.classList.remove( 'red')
+    }
+    else{
+        heading.classList.add('red')
+    }
+}
+btn.addEventListener('click', changeColors);
+*/
+
+/* Other Event Listeners
+//click- fires after full action occurs
+//mousedown - button is pressed
+//mouseup - button is released
+//mouseenter - moved onto of an element
+//mouseleave - moved out of an element
+
+const heading = document.querySelector('h1');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function() {
+    console.log('you clicked me');
+});
+btn.addEventListener('mousedown', function() {
+    console.log('down');
+});
+btn.addEventListener('mouseup', function() {
+    console.log('up');
+});
+
+heading.addEventListener('mouseenter', function() {
+    heading.classList.add('blue')
+});
+heading.addEventListener('mouseleave', function() {
+    heading.classList.remove('blue')
+});
+*/
+
+
+/* Key Events
+const nameInput = document.getElementById('name')
+// nameInput.addEventListener('keypress', function() {
+//     console.log('you pressed a key');
+// });
+// nameInput.addEventListener('keydown', function() {
+//     console.log('you are holding a key down');
+// });
+nameInput.addEventListener('keyup', function() {
+    //console.dir(nameInput);
+    console.log(nameInput.value);
+});
+ */
+
+
 
 
 

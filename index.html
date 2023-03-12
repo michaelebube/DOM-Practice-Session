@@ -17,13 +17,41 @@
         } */
 
          /* createElement('element), createTextNode('text content) , element.appendChild(childElement), inserBefore and replaceChild */
-        .red{
+        /* .red{
             background: red;
             color: white;
         }
         .blue{
             background: blue;
             color: white;
+            font-size: 3rem;
+        } */
+        /* .title{
+            background: blue;
+            color: white;
+            font-size: 3rem;
+            text-transform: capitalize;
+        } */
+
+        .red{
+            
+            background: red;
+            color: white;
+            text-transform: capitalize;
+            letter-spacing: 2rem;
+        
+        }
+        .blue{
+            background: blue;
+            color: white;
+             text-transform: capitalize;
+            letter-spacing: 10px;
+        }
+        .btn{
+            background: #f15025;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
         }
     </style>
 </head>
@@ -126,10 +154,42 @@
 <!-- prepend, innerText 
 <h1>first heading</h1>
 -->
+
+<!-- remove(), removeChild() 
 <h1>hello world</h1>
 <div id="result">
     <h1>second heading</h1>
 </div>
+-->
+
+<!-- innerHTML and textContent 
+<ul id="first">
+    <li class="item">list item</li>
+    <li>list item</li>
+</ul>
+<div id="second">
+    I have some text content.
+</div>
+-->
+
+<!-- CSS 
+<div class = "random">I'm just some random div looking for the css</div>
+-->
+
+<!-- Click Event -  addEventlistener() 
+<h2>events in javascript</h2>
+<button class="btn">click me</button>
+<p onclick = "this.classList.add('red')">the old style</p>
+-->
+
+<!-- Other Event Listeners - mousedown, mouseup, mouseenter, mouseleave 
+<h1>events in javascript</h1>
+<button class="btn">click me</button>
+-->
+
+<!-- Key Events 
+<input type="text" id = "name">
+-->
     <script src="./app.js"></script>
 </script>
 </body>
