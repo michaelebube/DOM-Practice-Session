@@ -7,7 +7,7 @@
 /* Window Object */
 console.log(window)
  console.dir(document)
-
+ 
  /* getElementById('element') 
 const h1 = document.getElementById("title");
 h1.style.color = "red";
@@ -351,7 +351,160 @@ nameInput.addEventListener('keyup', function() {
 });
  */
 
+/* Event Object 
+const heading = document.querySelector('h1')
+const btn = document.querySelector('.btn')
+const link = document.getElementById('link')
 
+heading.addEventListener('click', (event) => {
+    // headings.classList.add('blue')
+    console.log(event.currentTarget);
+    console.log(this);
+}); 
+
+btn.addEventListener('click', function(event) {
+    // headings.classList.add('blue')
+    event.currentTarget.classList.add('blue');
+    console.log(event.type);
+}); 
+
+function someFunc(e) {
+    e.preventDefault(); 
+}
+
+link.addEventListener('click', someFunc);
+*/
+
+/* currentTarget and target
+const btns = document.querySelectorAll('.btn')
+
+btns.forEach(function(btn) {
+btn.addEventListener('click', function(e) {
+// console.log(e.currentTarget);
+// e.currentTarget.style.color = 'green';
+console.log('target', e.target);
+console.log('currentTarget', e.currentTarget);
+e.target.style.color = 'green'
+});
+});
+ */
+
+/* Event Propagation - Event Bubbling and Event Capturing 
+const container = document.querySelector('.container');
+const list = document.querySelector('.list-items')
+
+function showBubbling(e) {
+    console.log('current target',e.currentTarget);
+    // console.log('target',e.target);
+    // if(e.target.classList.contains('link')) {
+    //     console.log('you clicked on the click');
+    // }
+}
+
+// How to stop Event Propagation
+
+function stopPropagation(e) {
+    console.log('you click on the list');
+
+    e.stopPropagation();
+}
+
+//Event Bubbling 
+
+// container.addEventListener('click', showBubbling);
+// document.addEventListener('click', showBubbling)
+// window.addEventListener('click', showBubbling)
+// list.addEventListener('click', showBubbling)
+
+// Event Capturing 
+
+container.addEventListener('click', showBubbling, {capture: true});
+document.addEventListener('click', showBubbling, {capture: true})
+window.addEventListener('click', showBubbling, {capture: true})
+list.addEventListener('click', showBubbling, {capture: true})
+*/
+
+/* Event Propagation Example 
+const container = document.querySelector('.container')
+const btn = document.querySelector('.btn')
+// const heading = document.querySelector('.heading')
+
+function sayHello(){
+    console.log('Hello there');
+}
+
+btn.addEventListener('click', function() {
+    const element = document.createElement('h1')
+    element.classList.add('heading')
+    element.textContent = `I'm inside the container`
+    container.appendChild(element);
+})
+container.addEventListener('click', function(e) {
+    if (e.target.classList.contains('heading')) {
+        console.log('hello there');
+    }
+})
+
+// heading.addEventListener('click', sayHello )
+*/
+
+/* Form Submit Event Listener 
+const form = document.getElementById('form');
+const namee = document.getElementById('name');
+const password = document.getElementById('password');
+
+form.addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    console.log('form submitted')
+    console.log(namee.value);
+    console.log(password.value);
+});
+*/
+
+/* Web Storage API - Local Storage 
+// localStorage.setItem('name','john')
+// sessionStorage.setItem('name','Michael')
+
+localStorage.setItem('namel', 'john');
+// localStorage.setItem('name', 'peter')
+localStorage.setItem('friend', 'peter');
+localStorage.setItem('job', 'developer');
+localStorage.setItem('address', 'street 123');
+
+const namel = localStorage.getItem('namel');
+console.log(namel);
+
+localStorage.removeItem('namel');
+
+const anotherName = localStorage.getItem('namel');
+console.log(anotherName);
+
+localStorage.clear();
+*/
+
+/* Local Storage With Multiple Values */
+//JSON.stringify()
+
+const friends = ['john', 'mike', 'mandie'];
+localStorage.setItem('friends', JSON.stringify(friends));
+
+const values = JSON.parse(localStorage.getItem('friends'));
+console.log(values[2]);
+
+let fruits;
+
+if(localStorage.getItem('fruits')) {
+fruits = JSON.parse(localStorage.getItem('fruits'));
+}
+else{
+    fruits = []
+}
+console.log(fruits);
+// fruits.push('apple')
+fruits.push('orange');
+
+
+ localStorage.setItem('fruits', JSON.stringify(fruits))
 
 
 

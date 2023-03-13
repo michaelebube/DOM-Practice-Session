@@ -33,7 +33,7 @@
             text-transform: capitalize;
         } */
 
-        .red{
+         /* .red{
             
             background: red;
             color: white;
@@ -41,18 +41,25 @@
             letter-spacing: 2rem;
         
         }
+           .btn{
+            background: #f15025;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            border: none;
+        } 
         .blue{
             background: blue;
             color: white;
              text-transform: capitalize;
             letter-spacing: 10px;
         }
-        .btn{
-            background: #f15025;
-            color: white;
-            font-size: 1.2rem;
-            border: none;
-        }
+       
+        a{
+            display: inline-block;
+            margin-top: 100vh;
+        } */
+
     </style>
 </head>
 <body>
@@ -190,6 +197,46 @@
 <!-- Key Events 
 <input type="text" id = "name">
 -->
+
+<!-- Event Object 
+<button class="btn">click me</button>
+<h1>some heading</h1>
+<a href="#" id="link">random link</a>
+-->
+
+<!-- Event Object- currentTarget vs target 
+<button class="btn">first button</button>
+<button class="btn">second <strong>button<strong> more nested</strong>
+</button>
+<button class="btn">third button</button>
+-->
+
+<!-- Event Propagation, Event Bubbling and Event Capturing 
+<div class="container">
+    <ul class="list-items">
+        <li class="item"><a href="#" class="link">link</a>
+        </li>
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+    </ul>
+</div>
+-->
+
+<!-- Event Propagation Example to display when it is applicable 
+<div class="container">
+    // <h1 class="heading">I'm sitting inside a container</h1>  
+</div>
+<button class="btn">click me</button>
+-->
+
+<!-- Form Subbmit Event Listener 
+<form action="" id="form">
+    <input type="text" id="name">
+    <input type="password" id="password">
+    <input type="submit" id="submit"></form>
+-->
+    
+
     <script src="./app.js"></script>
 </script>
 </body>
