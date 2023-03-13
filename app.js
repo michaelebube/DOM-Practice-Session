@@ -482,7 +482,7 @@ console.log(anotherName);
 localStorage.clear();
 */
 
-/* Local Storage With Multiple Values */
+/* Local Storage With Multiple Values
 //JSON.stringify()
 
 const friends = ['john', 'mike', 'mandie'];
@@ -505,7 +505,7 @@ fruits.push('orange');
 
 
  localStorage.setItem('fruits', JSON.stringify(fruits))
-
+ */
 
 
 
